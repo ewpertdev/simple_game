@@ -32,7 +32,7 @@ public class SimpleStartupTestDrive {
         SimpleStartup dot = new SimpleStartup();
         int[] locations = {2, 3, 4};
         dot.setLocationCells(locations);
-        int userGuess = 2;
+        int userGuess = 0;
         String result = dot.checkYourself(userGuess);
         String testResult = "failed";
         if (result.equals("hit")) {
