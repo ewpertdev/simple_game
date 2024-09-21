@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package startupgame;
 
 class SimpleStartup {
     private int[] locationCells;
@@ -27,39 +27,6 @@ class SimpleStartup {
     }
 }
 
-public class GameHelper {
-    public int getUserInput(String prompt) {
-        System.out.println(prompt + ": ");
-        Scanner scanner = new Scanner(System.in);
-        return scanner.nextInt();
-    }
-
-}
-public class Game {
-    public static void main(String[] args) {
-        int numOfGuesses = 0;
-        GameHelper helper = new GameHelper();
-
-        SimpleStartup theStartup = new SimpleStartup();
-
-        int randomNum = (int) (Math.random() * 5);
-
-        theStartup.setLocationCells(locations);
-
-        boolean isAlive = true;
-
-        while (isAlive) {
-            int guess = helper.getUserInput("enter a number");
-            String result = theStartup.checkYourself(guess);
-            numOfGuesses++;
-            if(result.equals("kill")) {
-                isAlive=false;
-                System.out.println("You took " + numOfGuesses+" guesses");
-            }
-        }
-    }
-
-}
 
 public class SimpleStartupTestDrive {
 
@@ -77,6 +44,7 @@ public class SimpleStartupTestDrive {
         }
         System.out.println(testResult);
     }
+}
 
 
 
