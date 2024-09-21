@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class SimpleStartup {
     private int[] locationCells;
     private int numOfHits = 0;
@@ -25,7 +27,15 @@ class SimpleStartup {
     }
 }
 
-class game {
+public class GameHelper {
+    public int getUserInput(String prompt) {
+        System.out.println(prompt + ": ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
+}
+public class Game {
     public static void main(String[] args) {
         int numOfGuesses = 0;
         GameHelper helper = new GameHelper();
