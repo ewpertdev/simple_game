@@ -11,7 +11,7 @@ class SimpleStartup {
 
         for (int cell : locationCells) {
             if (guess == cell) {
-                // we got a hit
+
                 result = "hit";
                 numOfHits++;
                 break;
@@ -32,7 +32,7 @@ public class SimpleStartupTestDrive {
         SimpleStartup dot = new SimpleStartup();
         int[] locations = {2, 3, 4};
         dot.setLocationCells(locations);
-        int userGuess = 0;
+        int userGuess = -1;
         String result = dot.checkYourself(userGuess);
         String testResult = "failed";
         if (result.equals("hit")) {
